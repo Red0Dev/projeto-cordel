@@ -1,0 +1,161 @@
+/* globais */
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap'); /* 'Passion One', cursive */
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap'); /* 'Sriracha', cursive */
+
+/* gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+:root {
+    --padrao: Verdana, Geneva, Tahoma, sans-serif;
+    --titulo: 'Passion One', cursive;
+    --cordel: 'Sriracha', cursive;
+}
+
+body {
+    background-color: darkgrey;
+    font-family: var(--padrao);
+}
+
+/* header */
+
+header.flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2em 0;
+    background-color: black;
+    color: white;
+}
+
+header .titulo {
+    font-family: var(--titulo);
+    font-weight: normal;
+    font-size: 6vw;
+    font-variant: small-caps;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header > .creditos {
+    margin: auto;
+    font-size: 1.5vw;
+}
+
+/* main */
+
+section {
+    padding: 10vh 0 10vh 2.5rem;
+    line-height: 2em;
+    font-size: 2vw;
+}
+
+section.normal {
+    font-family: var(--cordel);
+    background-color: white;
+}
+
+section .espacamento {
+    margin: 0 0 2em 0;
+}
+
+section.imagem {
+    font-family: var(--cordel);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0 rgba(0, 0, 0, 0.47);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section#img01 {
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url(imagens/background002.jpg);
+    background-position: right center;
+}
+
+section.imagem > p {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50vw;
+    min-width: 200px;
+    max-width: 500px;
+    padding: 0 0 0 1em;
+    text-shadow: 2px 2px 0px black;
+}
+
+/* footer */
+
+footer.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    padding: 3px 10px;
+    background-color: black;
+    color: white;
+}
+
+footer a img { 
+    width: 3vw;
+    max-width: 30px;
+    min-width: 30px;
+}
+
+@media screen and (max-width: 750px) {
+
+    header .titulo {
+        font-size: 10vw;
+    }
+
+    header .creditos {
+        font-size: 2.5vw;
+    }
+
+    section {
+        font-size: 4vw;
+    }
+
+    section.imagem > p {
+        text-shadow: 1px 1px 0 black;
+    }
+
+    footer {
+        padding: 0;
+    }
+
+    footer p {
+        font-size: 2vw;
+    }
+
+    footer a img {
+        min-width: 25px;
+        width: 5vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer p {
+        font-size: 2.7vw;
+    }
+}
